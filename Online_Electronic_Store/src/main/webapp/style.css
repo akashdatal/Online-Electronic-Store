@@ -1,0 +1,34 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+   
+    background-image:url("https://www.atypicalfinance.com/wp-content/uploads/2018/10/Homepage-background.jpg");
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+	font-size: 50px;
+	font: bold;
+	color: #FFFFFF;
+}
+h1{
+	color:red;
+	font-size: 50px;
+	font: bold;
+	
+}
+div{
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.2);
+	border-radius:30px; 
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-bottom: 20px;
+	padding-top: 30px;
+}

@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8">
+  <title>Customer Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body><center><h1>
-<form action="crs" method="post"><br>
-	<u><i>Enter Customer Details</i></u><br><br>
-	UserName  <input type="text" name="cname"><br><br>
-	Password  <input type="password" name="cpwd"><br><br>
-	FirstName  <input type="text" name="cfname"><br><br>
-	Last Name  <input type="text" name="clname"><br><br>
-	Address  <input type="text" name="caddr"><br><br>
-	Mail ID  <input type="text" name="cmid"><br><br>
-	Mobile  <input type="text" name="cmbn"><br><br>
-	
-	<input type="submit" value="Register" id="inp">
-</form>
+<body class="bg-light">
 
+  <div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="card shadow-lg p-4" style="width: 100%; max-width: 500px;">
+      <h3 class="card-title text-center mb-4"><u><i>Enter Customer Details</i></u></h3>
+      <form action="crs" method="post">
+        
+        <div class="mb-3">
+          <label for="cname" class="form-label">Username</label>
+          <input type="text" class="form-control" name="cname" id="cname" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="cpwd" class="form-label">Password</label>
+          <input type="password" class="form-control" name="cpwd" id="cpwd" required>
+        </div>
+
+        <div class="mb-3">
+          <label for="cfname" class="form-label">First Name</label>
+          <input type="text" class="form-control" name="cfname" id="cfname">
+        </div>
+
+        <div class="mb-3">
+          <label for="clname" class="form-label">Last Name</label>
+          <input type="text" class="form-control" name="clname" id="clname">
+        </div>
+
+        <div class="mb-3">
+          <label for="caddr" class="form-label">Address</label>
+          <input type="text" class="form-control" name="caddr" id="caddr">
+        </div>
+
+        <div class="mb-3">
+          <label for="cmid" class="form-label">Email ID</label>
+          <input type="email" class="form-control" name="cmid" id="cmid">
+        </div>
+
+        <div class="mb-3">
+          <label for="cmbn" class="form-label">Mobile Number</label>
+          <input type="text" class="form-control" name="cmbn" id="cmbn">
+        </div>
+
+        <div class="d-grid">
+          <input type="submit" class="btn btn-primary" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

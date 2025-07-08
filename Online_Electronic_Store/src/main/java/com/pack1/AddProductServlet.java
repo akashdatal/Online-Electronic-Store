@@ -14,31 +14,35 @@ import javax.servlet.http.HttpSession;
 public class AddProductServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-		HttpSession session =req.getSession();
-		if(session==null) {
-			req.setAttribute("msg", "Session Expired");
-			RequestDispatcher rd = req.getRequestDispatcher("AdminLogin.html");
-			rd.forward(req, res);
-		}
-		else
-		{
-			ProductBean pbean = new ProductBean();
-			pbean.setpCode(req.getParameter("pcode"));
-			pbean.setpName(req.getParameter("pname"));
-			pbean.setpCompany(req.getParameter("pcompany"));
-			pbean.setpPrice(req.getParameter("pprice"));
-			pbean.setpQuantity(req.getParameter("pqty"));
-			
-			int rowCount = new AddProductDAO().insertData(pbean);
-			
-			if(rowCount >0 )
-			{
-				req.setAttribute("msg", "Product details addes succesfully");
-				RequestDispatcher rd = req.getRequestDispatcher("AddProduct.jsp");
+		try {
+			HttpSession session =req.getSession();
+			if(session==null) {
+				req.setAttribute("msg", "Session Expired");
+				RequestDispatcher rd = req.getRequestDispatcher("AdminLogin.html");
 				rd.forward(req, res);
-		
 			}
+			else
+			{
+				ProductBean pbean = new ProductBean();
+				pbean.setpCode(req.getParameter("pcode"));
+				pbean.setpName(req.getParameter("pname"));
+				pbean.setpCompany(req.getParameter("pcompany"));
+				pbean.setpPrice(req.getParameter("pprice"));
+				pbean.setpQuantity(req.getParameter("pqty"));
+				
+				int rowCount = new AddProductDAO().insertData(pbean);
+				
+				if(rowCount >0 )
+				{
+					req.setAttribute("msg", "Product details added succesfully");
+					RequestDispatcher rd = req.getRequestDispatcher("AddProduct.jsp");
+					rd.forward(req, res);
 			
+				}}
+			}	
+		catch (Exception e) {
+			req.setAttribute("msg", "Duplicate Product Codes are NOT Allowed");		}
+			req.getRequestDispatcher("Error.jsp").forward(req, res);
 		}
-	}
+			
 }

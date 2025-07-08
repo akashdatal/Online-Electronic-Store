@@ -8,21 +8,21 @@ import javax.servlet.http.HttpSessionListener;
 @WebListener
 public class SessionListener implements HttpSessionListener,HttpSessionAttributeListener
 {
-	@Override
-	public void sessionCreated(HttpSessionEvent se) {
-		System.out.println("Session Created ");
-	}
-	@Override
-	public void sessionDestroyed(HttpSessionEvent se) {
-		System.out.println("Session Destroyed");
-	}
-	@Override
-	public void attributeAdded(HttpSessionBindingEvent se) {
-		System.out.println("Attribute Added to the Session ");
-	}
-	@Override
-	public void attributeRemoved(HttpSessionBindingEvent se) {
-		System.out.println("Attribute Removed from Session");
-	}
+//	@Override
+//	public void sessionCreated(HttpSessionEvent se) {
+//		System.out.println("Session Created ");
+//	}
+//	@Override
+//	public void sessionDestroyed(HttpSessionEvent se) {
+//		System.out.println("Session Destroyed");
+//	}
+//	@Override
+//	public void attributeAdded(HttpSessionBindingEvent se) {
+//		System.out.println("Attribute Added to the Session ");
+//	}
+//	@Override
+//	public void attributeRemoved(HttpSessionBindingEvent se) {
+//		System.out.println("Attribute Removed from Session");
+//	}
 	
 }

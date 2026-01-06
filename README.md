@@ -53,29 +53,17 @@ Data validation and form handling
 📁 Suggested Directory Structure
 Online-Electronic-Store/
 ├── src/
-
 │   ├── main/
-
 │   │   ├── java/         # Java backend files
-
 │   │   └── webapp/
-
 │   │       ├── WEB-INF/
-
 │   │       ├── css/
-
 │   │       ├── js/
-
 │   │       └── jsp/       # JSP pages
-
 ├── pom.xml                # Maven config
-
 ├── README.md
-
 └── sql/
-
-    └── database.sql       # Database schema
-    
+    └── database.sql       # Database schema  
 
 🧩 How It Works
 🔹 Backend (Java + Servlet)

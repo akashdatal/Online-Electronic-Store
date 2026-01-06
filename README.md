@@ -51,6 +51,7 @@ Secure user sessions
 Data validation and form handling
 
 📁 Suggested Directory Structure
+
 Online-Electronic-Store/
 ├── src/
 │   ├── main/
